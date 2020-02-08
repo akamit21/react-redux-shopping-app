@@ -6,20 +6,12 @@ import Footer from "./component/common/Footer";
 import Routes from "./routes/Routes";
 import "./App.css";
 
-export default class App extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      products: {
-        Shirts: []
-      }
-    };
+    this.state = {};
   }
 
-  componentDidMount = async () => {
-    let data = await fetch("/data.json").then(res => res.json());
-    this.setState({ products: data });
-  };
   render() {
     return (
       <React.Fragment>
@@ -32,3 +24,5 @@ export default class App extends React.Component {
     );
   }
 }
+
+export default App;
