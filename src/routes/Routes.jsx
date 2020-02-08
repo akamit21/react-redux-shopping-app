@@ -1,8 +1,9 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import Home from "../component/Home";
+import Home from "../component/pages/Home";
 import About from "../component/pages/About";
 import Product from "../component/pages/Product";
+import Items from "../component/container/Items";
 import Faq from "../component/pages/Faq";
 import Contact from "../component/pages/Contact";
 import Login from "../component/pages/Login";
@@ -14,7 +15,7 @@ const Routes = () => {
       <Route path="/" exact component={Home} />
       <Route path="/about" component={About} />
       <Route path="/product" exact component={Product} />
-      <Route path="/product/:for" exact component={Product} />
+      <Route path="/product/:type" exact component={Items} />
       {/* <Route
         path="/product/:for/:type"
         render={props => <Items {...props} data={this.state.products} />}
