@@ -1,9 +1,10 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 import Navbar from "./component/common/Navbar";
 import Footer from "./component/common/Footer";
 
-import "./App.css";
 import Routes from "./routes/Routes";
+import "./App.css";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -24,10 +25,9 @@ export default class App extends React.Component {
       <React.Fragment>
         <Navbar />
         <Routes />
-
-        <div className="container-fluid border-top">
+        <Container fluid className="border-top">
           <Footer />
-        </div>
+        </Container>
       </React.Fragment>
     );
   }
